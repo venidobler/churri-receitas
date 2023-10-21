@@ -1,6 +1,6 @@
 # churri_receitas
 
-A new Flutter project.
+Projeto de receitas - Flutter
 
 ## Getting Started
 
