@@ -16,12 +16,13 @@ class MyApp extends StatelessWidget {
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange[800],
         onPressed: () {},
         child: const Icon(Icons.search),
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        color: Theme.of(context).colorScheme.primary,
+        color: Colors.orange[600],
         child: IconTheme(
           data: IconThemeData(color: Theme.of(context).colorScheme.onPrimary),
           child: Padding(
@@ -32,16 +33,22 @@ class MyApp extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
+                    Icons.home,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
                     Icons.favorite,
                   ),
                 ),
+                const SizedBox(width: 24),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
                     Icons.person,
                   ),
                 ),
-                const SizedBox(width: 24),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
