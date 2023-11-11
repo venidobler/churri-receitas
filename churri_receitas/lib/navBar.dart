@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'model/component/backgroundcomponent.dart';
+import 'model/component/logo.dart';
+import 'package:flutter/material.dart';
+import 'view/home.dart';
+import 'view/search.dart';
+import 'view/favoritos.dart';
+import 'view/profile.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -6,23 +13,60 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    Home(),
+    Search(),
+    Favoritos(),
+    Profile(),
+  ];
+
+  void _onTabTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(child: Text('Fala Galera')),
+      appBar: AppBar(
+        backgroundColor: Color(0xffF9A72A),
+        elevation: 0,
+        centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Logo(),
+          ],
+        ),
+      ),
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.orange[800],
-        onPressed: () {},
-        child: const Icon(Icons.search),
+        backgroundColor: Color(0xffF9A72A),
+        onPressed: () {
+        },
+        child: LogoWithBorderRadius(),
+      ),
+      body: Stack(
+        children: [
+          Backgroundcomponent(),
+          _pages[_selectedIndex],
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        color: Colors.orange[600],
+        color: Color(0xffF9A72A),
         child: IconTheme(
           data: IconThemeData(color: Theme.of(context).colorScheme.onPrimary),
           child: Padding(
@@ -31,28 +75,36 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _onTabTapped(0);
+                  },
                   icon: const Icon(
                     Icons.home,
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _onTabTapped(2);
+                  },
                   icon: const Icon(
                     Icons.favorite,
                   ),
                 ),
                 const SizedBox(width: 24),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _onTabTapped(1);
+                  },
                   icon: const Icon(
-                    Icons.person,
+                    Icons.search,
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _onTabTapped(3);
+                  },
                   icon: const Icon(
-                    Icons.settings,
+                    Icons.person,
                   ),
                 )
               ],
@@ -63,3 +115,18 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class LogoWithBorderRadius extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(0xffF9A72A),
+        borderRadius:
+            BorderRadius.circular(16.0),
+      ),
+      child: LogoNav(), 
+    );
+  }
+}
+
