@@ -5,7 +5,7 @@ class LogoNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: 25,
-      backgroundImage: AssetImage('assets/images/LogoNav.png'),
+      backgroundImage: AssetImage('assets/images/logoNav.png'),
     );
   }
 }
