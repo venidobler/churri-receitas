@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'view/home.dart';
 import 'view/search.dart';
 import 'view/favoritos.dart';
-import 'view/profile.dart';
+import 'view/profileScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Home(),
     Search(),
     Favoritos(),
-    Profile(),
+    ProfileScreen(),
     // Adicione mais telas associadas às guias aqui
   ];
 

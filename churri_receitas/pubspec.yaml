@@ -68,6 +68,7 @@ flutter:
      -  assets/images/Lasanha.png
      -  assets/images/Pudim.png
      -  assets/images/BoloCenoura.png
+     -  assets/images/imagem_pessoa.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

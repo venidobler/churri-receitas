@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'view/home.dart';
 import 'view/search.dart';
 import 'view/favoritos.dart';
-import 'view/profile.dart';
+import 'view/profileScreen.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     Home(),
     Search(),
     Favoritos(),
-    Profile(),
+    ProfileScreen(),
   ];
 
   void _onTabTapped(int index) {
