@@ -1,10 +1,11 @@
-import 'package:churry/model/products_model.dart'; 
+import 'package:churry/model/products_model.dart';
 
 List<Product> productsData = [
   Product(
     name: 'Hambúrguer Caseiro',
-    description: 'Nada melhor para receber os amigos no fim de semana do que um delicioso hambúrguer artesanal, com aquele toquezinho caseiro especial! Quer aprender como fazer? Cola aqui que a gente te dá o passo a passo!',
-    imageUrl: 'assets/hamburguer_image.jpg',
+    description:
+        'Nada melhor para receber os amigos no fim de semana do que um delicioso hambúrguer artesanal, com aquele toquezinho caseiro especial! Quer aprender como fazer? Cola aqui que a gente te dá o passo a passo!',
+    imageUrl: 'assets/images/Hamburguer.png',
     recipe: [
       RecipeStep(
         text: '1 Kg de carne moída (preferencialmente de patinho)',
@@ -39,7 +40,7 @@ List<Product> productsData = [
         imagePath: 'assets/images/IconReceita',
       ),
     ],
-    preparation:  '''
+    preparation: '''
     Tempo estimado: 30 minutos\n\n
     Modo de preparo:\n
     1. Misture todos os ingredientes, amasse bem e forme bolinhas, depois achate para ter a forma de hambúrguer.\n
@@ -48,45 +49,45 @@ List<Product> productsData = [
     Descrição do passo 2...
   ''',
   ),
-    Product(
-      name: 'Lasanha de Carne',
-      description: 'Uma deliciosa lasanha de carne feita em casa!',
-      imageUrl: 'assets/lasanha_image.jpg',
-      recipe: [
-        RecipeStep(
-          text: '500g de massa para lasanha pré-cozida',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '500g de carne moída',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '1 cebola picada',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '2 dentes de alho picados',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '400g de molho de tomate',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '300g de queijo mussarela ralado',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '200g de queijo parmesão ralado',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: 'Azeite, sal e pimenta a gosto',
-          imagePath: 'assets/images/IconReceita',
-        ),
-      ],
-      preparation:  '''
+  Product(
+    name: 'Lasanha de Carne',
+    description: 'Uma deliciosa lasanha de carne feita em casa!',
+    imageUrl: 'assets/images/Lasanha.png',
+    recipe: [
+      RecipeStep(
+        text: '500g de massa para lasanha pré-cozida',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '500g de carne moída',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '1 cebola picada',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '2 dentes de alho picados',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '400g de molho de tomate',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '300g de queijo mussarela ralado',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '200g de queijo parmesão ralado',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: 'Azeite, sal e pimenta a gosto',
+        imagePath: 'assets/images/IconReceita',
+      ),
+    ],
+    preparation: '''
       Tempo estimado: 1 hora e 30 minutos\n\n
       Modo de preparo:\n
       1. Em uma panela, aqueça o azeite e refogue a cebola e o alho.\n
@@ -97,34 +98,34 @@ List<Product> productsData = [
       6. Retire o papel-alumínio e deixe assar por mais 15 minutos ou até gratinar.\n
       7. Retire do forno, deixe descansar por alguns minutos e sirva quente.
       ''',
-    ),
-    Product(
-      name: 'Pudim de Leite Condensado',
-      description: 'Um clássico pudim cremoso e delicioso!',
-      imageUrl: 'assets/pudim_image.jpg',
-      recipe: [
-        RecipeStep(
-          text: '1 lata de leite condensado',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: 'A mesma medida (lata) de leite integral',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '4 ovos',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '1 xícara (chá) de açúcar',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: 'Calda de caramelo pronta (ou faça a sua)',
-          imagePath: 'assets/images/IconReceita',
-        ),
-      ],
-      preparation:  '''
+  ),
+  Product(
+    name: 'Pudim de Leite Condensado',
+    description: 'Um clássico pudim cremoso e delicioso!',
+    imageUrl: 'assets/images/Pudim.png',
+    recipe: [
+      RecipeStep(
+        text: '1 lata de leite condensado',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: 'A mesma medida (lata) de leite integral',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '4 ovos',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '1 xícara (chá) de açúcar',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: 'Calda de caramelo pronta (ou faça a sua)',
+        imagePath: 'assets/images/IconReceita',
+      ),
+    ],
+    preparation: '''
       Tempo estimado: 1 hora\n\n
       Modo de preparo:\n
       1. Preaqueça o forno a 180°C.\n
@@ -135,42 +136,44 @@ List<Product> productsData = [
       6. Retire do forno, deixe esfriar e leve à geladeira por algumas horas ou de um dia para o outro.\n
       7. Desenforme o pudim em um prato e sirva gelado.
     ''',
-    ),
-     Product(
-      name: 'Bolo de Cenoura com Cobertura de Chocolate',
-      description: 'Um bolo fofinho de cenoura com uma deliciosa cobertura cremosa de chocolate!',
-      imageUrl: 'assets/bolo_cenoura_chocolate_image.jpg',
-      recipe: [
-        RecipeStep(
-          text: '3 cenouras médias raladas',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '3 ovos',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '1 xícara (chá) de óleo',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '2 xícaras (chá) de açúcar',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '2 xícaras (chá) de farinha de trigo',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: '1 colher (sopa) de fermento em pó',
-          imagePath: 'assets/images/IconReceita',
-        ),
-        RecipeStep(
-          text: 'Cobertura de chocolate a gosto (pode ser ganache ou brigadeiro mole)',
-          imagePath: 'assets/images/IconReceita',
-        ),
-      ],
-      preparation:  '''
+  ),
+  Product(
+    name: 'Bolo de Cenoura com Cobertura de Chocolate',
+    description:
+        'Um bolo fofinho de cenoura com uma deliciosa cobertura cremosa de chocolate!',
+    imageUrl: 'assets/images/BoloCenoura.png',
+    recipe: [
+      RecipeStep(
+        text: '3 cenouras médias raladas',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '3 ovos',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '1 xícara (chá) de óleo',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '2 xícaras (chá) de açúcar',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '2 xícaras (chá) de farinha de trigo',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text: '1 colher (sopa) de fermento em pó',
+        imagePath: 'assets/images/IconReceita',
+      ),
+      RecipeStep(
+        text:
+            'Cobertura de chocolate a gosto (pode ser ganache ou brigadeiro mole)',
+        imagePath: 'assets/images/IconReceita',
+      ),
+    ],
+    preparation: '''
       Tempo estimado: 1 hora\n\n
       Modo de preparo:\n
       1. Preaqueça o forno a 180°C.\n
@@ -181,5 +184,5 @@ List<Product> productsData = [
       6. Retire o bolo do forno, deixe esfriar e desenforme.\n
       7. Cubra o bolo com a cobertura de chocolate desejada (pode ser ganache ou brigadeiro mole) e sirva a seguir.
     ''',
-    ),
+  ),
 ];
