@@ -42,11 +42,8 @@ List<Product> productsData = [
     ],
     preparation: '''
     Tempo estimado: 30 minutos\n\n
-    Modo de preparo:\n
     1. Misture todos os ingredientes, amasse bem e forme bolinhas, depois achate para ter a forma de hambúrguer.\n
-    Descrição do passo 1...\n\n
     2. Frite numa frigideira antiaderente, coloque uma colher de óleo pois a carne não tem gordura\n
-    Descrição do passo 2...
   ''',
   ),
   Product(
@@ -89,7 +86,6 @@ List<Product> productsData = [
     ],
     preparation: '''
       Tempo estimado: 1 hora e 30 minutos\n\n
-      Modo de preparo:\n
       1. Em uma panela, aqueça o azeite e refogue a cebola e o alho.\n
       2. Acrescente a carne moída e cozinhe até dourar.\n
       3. Adicione o molho de tomate, tempere com sal e pimenta a gosto e deixe cozinhar por 10 minutos.\n
@@ -127,7 +123,6 @@ List<Product> productsData = [
     ],
     preparation: '''
       Tempo estimado: 1 hora\n\n
-      Modo de preparo:\n
       1. Preaqueça o forno a 180°C.\n
       2. Em um liquidificador, coloque o leite condensado, o leite integral, os ovos e bata por alguns minutos até obter uma mistura homogênea.\n
       3. Em uma forma de pudim, derreta o açúcar em fogo médio/baixo até obter um caramelo dourado. Espalhe o caramelo pela forma, cobrindo toda a superfície.\n
@@ -175,7 +170,6 @@ List<Product> productsData = [
     ],
     preparation: '''
       Tempo estimado: 1 hora\n\n
-      Modo de preparo:\n
       1. Preaqueça o forno a 180°C.\n
       2. No liquidificador, bata as cenouras, os ovos e o óleo até obter uma mistura homogênea.\n
       3. Em uma tigela, misture o açúcar, a farinha de trigo e o fermento em pó.\n

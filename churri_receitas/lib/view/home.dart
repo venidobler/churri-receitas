@@ -24,10 +24,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Receitas'),
+        title: const Text('Receitas'),
         actions: [
           IconButton(
-            icon: Icon(Icons.favorite),
+            icon: const Icon(Icons.favorite),
             onPressed: () {
               List<Product> favoritos = getFavoriteProducts();
               Navigator.push(
