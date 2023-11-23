@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:churry/model/component/list_products_data.dart';
-import 'package:churry/view/view_product.dart'; 
+import 'package:churry/view/view_product.dart';
+import '../model/products_model.dart';
+import 'FavoritosScreen.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -8,12 +10,36 @@ void main() {
   ));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  List<bool> isFavoriteList = List.generate(productsData.length, (index) => false);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Receitas'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.favorite),
+            onPressed: () {
+              List<Product> favoritos = getFavoriteProducts();
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FavoritosScreen(favoritos: favoritos),
+                ),
+              );
+            },
+          ),
+        ],
+      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -33,8 +59,7 @@ class Home extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          ProductDetailScreen(product: productsData[index]),
+                      builder: (context) => ProductDetailScreen(product: productsData[index]),
                     ),
                   );
                 },
@@ -68,7 +93,7 @@ class Home extends StatelessWidget {
                               borderRadius: BorderRadius.circular(50),
                               image: DecorationImage(
                                 image: AssetImage(productsData[index].imageUrl),
-                                fit: BoxFit.fitHeight, 
+                                fit: BoxFit.fitHeight,
                               ),
                             ),
                           ),
@@ -93,10 +118,17 @@ class Home extends StatelessWidget {
                           child: Container(
                             height: 40,
                             color: Colors.white,
-                            child: const Center(
-                              child: Icon(
-                                Icons.favorite,
-                                color: Colors.red,
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  isFavoriteList[index] = !isFavoriteList[index];
+                                });
+                              },
+                              child: Center(
+                                child: Icon(
+                                  Icons.favorite,
+                                  color: isFavoriteList[index] ? Colors.red : Colors.grey,
+                                ),
                               ),
                             ),
                           ),
@@ -111,5 +143,15 @@ class Home extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<Product> getFavoriteProducts() {
+    List<Product> favoritos = [];
+    for (int i = 0; i < productsData.length; i++) {
+      if (isFavoriteList[i]) {
+        favoritos.add(productsData[i]);
+      }
+    }
+    return favoritos;
   }
 }

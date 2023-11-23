@@ -3,7 +3,7 @@ import 'model/component/logo.dart';
 import 'package:flutter/material.dart';
 import 'view/home.dart';
 import 'view/search.dart';
-import 'view/favoritos.dart';
+import 'view/favoritosScreen.dart';
 import 'view/profileScreen.dart';
 
 class MyApp extends StatelessWidget {
@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _pages = [
     Home(),
     Search(),
-    Favoritos(),
+    FavoritosScreen(favoritos: [],),
     ProfileScreen(),
     // Adicione mais telas associadas às guias aqui
   ];

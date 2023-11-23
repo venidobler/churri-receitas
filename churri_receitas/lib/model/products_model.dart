@@ -4,6 +4,7 @@ class Product {
   final String imageUrl;
   final List<RecipeStep> recipe;
   final String preparation;
+  bool isFavorite; // Novo atributo
 
   Product({
     required this.name,
@@ -11,6 +12,7 @@ class Product {
     required this.imageUrl,
     required this.recipe,
     required this.preparation,
+    this.isFavorite = false, // Valor padrão é falso
   });
 }
 

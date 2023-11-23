@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'model/component/backgroundcomponent.dart';
 import 'model/component/logo.dart';
-import 'package:flutter/material.dart';
 import 'view/home.dart';
 import 'view/search.dart';
-import 'view/favoritos.dart';
+import 'view/favoritosScreen.dart';
 import 'view/profileScreen.dart';
 
 void main() {
@@ -26,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _pages = [
     Home(),
     Search(),
-    Favoritos(),
+    FavoritosScreen(favoritos: []),
     ProfileScreen(),
   ];
 
@@ -34,6 +33,16 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _selectedIndex = index;
     });
+
+    if (index == 2) {
+      // Se o índice for 2 (favoritos), navegue para a tela de favoritos
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => FavoritosScreen(favoritos: []),
+        ),
+      );
+    }
   }
 
   @override
@@ -55,6 +64,7 @@ class _MyAppState extends State<MyApp> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xffF9A72A),
         onPressed: () {
+          // Lógica para o botão de ação flutuante (floating action button)
         },
         child: LogoWithBorderRadius(),
       ),
@@ -122,11 +132,9 @@ class LogoWithBorderRadius extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Color(0xffF9A72A),
-        borderRadius:
-            BorderRadius.circular(16.0),
+        borderRadius: BorderRadius.circular(16.0),
       ),
-      child: LogoNav(), 
+      child: LogoNav(),
     );
   }
 }
-
