@@ -130,7 +130,7 @@ class _HomeState extends State<Home> {
                                 child: Icon(
                                   Icons.favorite,
                                   color: product.isFavorite
-                                      ? Colors.red
+                                      ? Colors.amber
                                       : Colors.grey,
                                 ),
                               ),

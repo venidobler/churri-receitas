@@ -100,7 +100,7 @@ class FavoritosScreen extends StatelessWidget {
                             child: Center(
                               child: Icon(
                                 Icons.favorite,
-                                color: Colors.red, 
+                                color: Colors.amber, 
                               ),
                             ),
                           ),
