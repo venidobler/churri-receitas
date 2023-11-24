@@ -93,23 +93,7 @@ class _MyAppState extends State<MyApp> {
                     Icons.home,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {
-                    _onTabTapped(2);
-                  },
-                  icon: const Icon(
-                    Icons.favorite,
-                  ),
-                ),
                 const SizedBox(width: 24),
-                IconButton(
-                  onPressed: () {
-                    _onTabTapped(1);
-                  },
-                  icon: const Icon(
-                    Icons.search,
-                  ),
-                ),
                 IconButton(
                   onPressed: () {
                     _onTabTapped(3);

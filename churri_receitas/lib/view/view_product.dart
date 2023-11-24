@@ -105,35 +105,6 @@ class Home extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Positioned(
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        child: ClipRRect(
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                          ),
-                          child: Container(
-                            height: 60,
-                            color: Colors.white,
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                ),
-                                SizedBox(width: 8),
-                                Icon(
-                                  Icons.share,
-                                  color: Colors.red,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),
@@ -197,7 +168,6 @@ class ProductDetailScreen extends StatelessWidget {
               _buildSectionContentWithIngredients(product.recipe),
               _buildSectionTitle('Modo de Preparo'),
               _buildSectionContent(product.preparation),
-              _buildButtonRow(), // Adicione a linha de botões aqui
             ],
           ),
         ),
@@ -274,81 +244,6 @@ class ProductDetailScreen extends StatelessWidget {
             ),
           );
         }).toList(),
-      ),
-    );
-  }
-
-  Widget _buildButtonRow() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _buildFavoriteButton(),
-          _buildShareButton(),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFavoriteButton() {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: const Color.fromARGB(255, 235, 187, 115),
-      ),
-      child: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              Icons.favorite,
-              color: Colors.white,
-              size: 30,
-            ),
-            SizedBox(width: 10),
-            Text(
-              'Favoritar',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildShareButton() {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: const Color.fromARGB(255, 235, 187, 115),
-      ),
-      child: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              Icons.share,
-              color: Colors.white,
-              size: 30,
-            ),
-            SizedBox(width: 10),
-            Text(
-              'Compartilhar',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
