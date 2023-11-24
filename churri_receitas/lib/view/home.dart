@@ -18,7 +18,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<bool> isFavoriteList = List.generate(productsData.length, (index) => false);
+  List<bool> isFavoriteList =
+      List.generate(productsData.length, (index) => false);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,8 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ProductDetailScreen(product: productsData[index]),
+                      builder: (context) =>
+                          ProductDetailScreen(product: productsData[index]),
                     ),
                   );
                 },
@@ -97,13 +99,6 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 10),
-                          Center(
-                            child: Text(
-                              productsData[index].name,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
                         ],
                       ),
                       Positioned(
@@ -121,13 +116,16 @@ class _HomeState extends State<Home> {
                             child: GestureDetector(
                               onTap: () {
                                 setState(() {
-                                  isFavoriteList[index] = !isFavoriteList[index];
+                                  isFavoriteList[index] =
+                                      !isFavoriteList[index];
                                 });
                               },
                               child: Center(
                                 child: Icon(
                                   Icons.favorite,
-                                  color: isFavoriteList[index] ? Colors.red : Colors.grey,
+                                  color: isFavoriteList[index]
+                                      ? Colors.red
+                                      : Colors.grey,
                                 ),
                               ),
                             ),

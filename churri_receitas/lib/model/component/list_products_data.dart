@@ -9,35 +9,35 @@ List<Product> productsData = [
     recipe: [
       RecipeStep(
         text: '1 Kg de carne moída (preferencialmente de patinho)',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '1 Cebola picada',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'Cebolinha a gosto',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'Orégano a gosto',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '1 Sache de creme de cebola',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '4 Dentes de alho',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'Sal a gosto',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'Pimenta a gosto',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
     ],
     preparation: '''
@@ -53,35 +53,35 @@ List<Product> productsData = [
     recipe: [
       RecipeStep(
         text: '500g de massa para lasanha pré-cozida',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '500g de carne moída',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '1 cebola picada',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '2 dentes de alho picados',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '400g de molho de tomate',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '300g de queijo mussarela ralado',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '200g de queijo parmesão ralado',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'Azeite, sal e pimenta a gosto',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
     ],
     preparation: '''
@@ -102,23 +102,23 @@ List<Product> productsData = [
     recipe: [
       RecipeStep(
         text: '1 lata de leite condensado',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'A mesma medida (lata) de leite integral',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '4 ovos',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '1 xícara (chá) de açúcar',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: 'Calda de caramelo pronta (ou faça a sua)',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
     ],
     preparation: '''
@@ -140,32 +140,32 @@ List<Product> productsData = [
     recipe: [
       RecipeStep(
         text: '3 cenouras médias raladas',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '3 ovos',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '1 xícara (chá) de óleo',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '2 xícaras (chá) de açúcar',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '2 xícaras (chá) de farinha de trigo',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text: '1 colher (sopa) de fermento em pó',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
       RecipeStep(
         text:
             'Cobertura de chocolate a gosto (pode ser ganache ou brigadeiro mole)',
-        imagePath: 'assets/images/IconReceita',
+        imagePath: 'assets/images/IconReceita.png',
       ),
     ],
     preparation: '''
