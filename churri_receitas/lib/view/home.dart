@@ -18,9 +18,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<bool> isFavoriteList =
-      List.generate(productsData.length, (index) => false);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,13 +52,15 @@ class _HomeState extends State<Home> {
             ),
             itemCount: productsData.length,
             itemBuilder: (context, index) {
+              Product product = productsData[index];
+
               return GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          ProductDetailScreen(product: productsData[index]),
+                          ProductDetailScreen(product: product),
                     ),
                   );
                 },
@@ -94,7 +93,7 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
                               image: DecorationImage(
-                                image: AssetImage(productsData[index].imageUrl),
+                                image: AssetImage(product.imageUrl),
                                 fit: BoxFit.fitHeight,
                               ),
                             ),
@@ -116,14 +115,13 @@ class _HomeState extends State<Home> {
                             child: GestureDetector(
                               onTap: () {
                                 setState(() {
-                                  isFavoriteList[index] =
-                                      !isFavoriteList[index];
+                                  product.isFavorite = !product.isFavorite;
                                 });
                               },
                               child: Center(
                                 child: Icon(
                                   Icons.favorite,
-                                  color: isFavoriteList[index]
+                                  color: product.isFavorite
                                       ? Colors.red
                                       : Colors.grey,
                                 ),
@@ -144,12 +142,6 @@ class _HomeState extends State<Home> {
   }
 
   List<Product> getFavoriteProducts() {
-    List<Product> favoritos = [];
-    for (int i = 0; i < productsData.length; i++) {
-      if (isFavoriteList[i]) {
-        favoritos.add(productsData[i]);
-      }
-    }
-    return favoritos;
+    return productsData.where((product) => product.isFavorite).toList();
   }
 }
