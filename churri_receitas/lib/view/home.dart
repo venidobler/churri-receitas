@@ -25,12 +25,12 @@ class _HomeState extends State<Home> {
         title: Text(
           'Favoritos',
           style: TextStyle(
-            color: Colors.white, // Set the text color to white
-            fontWeight: FontWeight.bold, // Optional: Set the font weight
+            color: Colors.white, 
+            fontWeight: FontWeight.bold,
           ),
         ),
-        centerTitle: true, // Center the title
-        backgroundColor: Colors.amber, // Set the background color to orange
+        centerTitle: true, 
+        backgroundColor: Colors.amber, 
         actions: [
           IconButton(
             icon: const Icon(Icons.favorite),
@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                               235,
                               187,
                               115,
-                            ), // Fundo laranja
+                            ),
                           ),
                         ),
                       ),

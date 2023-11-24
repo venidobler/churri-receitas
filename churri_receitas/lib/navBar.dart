@@ -36,7 +36,6 @@ class _MyAppState extends State<MyApp> {
     });
 
     if (index == 2) {
-      // Se o índice for 2 (favoritos), navegue para a tela de favoritos
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -65,7 +64,6 @@ class _MyAppState extends State<MyApp> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xffF9A72A),
         onPressed: () {
-          // Lógica para o botão de ação flutuante (floating action button)
         },
         child: LogoWithBorderRadius(),
       ),

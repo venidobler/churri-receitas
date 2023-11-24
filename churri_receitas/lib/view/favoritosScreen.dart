@@ -15,11 +15,11 @@ class FavoritosScreen extends StatelessWidget {
         title: Text(
           'Favoritos',
           style: TextStyle(
-            color: Colors.white, // Cor do texto branco
+            color: Colors.white,
           ),
         ),
-        backgroundColor: const Color.fromARGB(255, 235, 187, 115), // Cor de fundo laranja
-        centerTitle: true, // Centraliza o título na barra de navegação
+        backgroundColor: const Color.fromARGB(255, 235, 187, 115), 
+        centerTitle: true, 
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -95,12 +95,12 @@ class FavoritosScreen extends StatelessWidget {
                           color: Colors.white,
                           child: GestureDetector(
                             onTap: () {
-                              // Ação ao clicar no ícone de favorito na tela de favoritos (opcional)
+                              
                             },
                             child: Center(
                               child: Icon(
                                 Icons.favorite,
-                                color: Colors.red, // Sempre vermelho na tela de favoritos
+                                color: Colors.red, 
                               ),
                             ),
                           ),

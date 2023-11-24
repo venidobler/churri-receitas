@@ -17,15 +17,15 @@ class _SearchState extends State<Search> {
           preferredSize: Size.fromHeight(30.0),
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white, // Cor de fundo branca
-              borderRadius: BorderRadius.circular(8.0), // Border Radius
+              color: Colors.white, 
+              borderRadius: BorderRadius.circular(8.0), 
             ),
             padding: EdgeInsets.all(8.0),
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
                 hintText: 'Pesquise sua receita',
-                border: InputBorder.none, // Remova a borda padrão
+                border: InputBorder.none, 
                 suffixIcon: IconButton(
                   icon: Icon(Icons.search),
                   onPressed: () {
@@ -47,11 +47,9 @@ class _SearchState extends State<Search> {
     );
   }
 
-  void _performSearch() {
-    // Obtenha a consulta de pesquisa do controlador
-    String query = _searchController.text;
-    //consulta sql aqui.
+  void _performSearch() { 
 
+    String query = _searchController.text;
     setState(() {
       _searchQuery = query;
     });

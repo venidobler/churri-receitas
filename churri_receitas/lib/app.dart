@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Search(),
     FavoritosScreen(favoritos: [],),
     ProfileScreen(),
-    // Adicione mais telas associadas às guias aqui
+    
   ];
 
   void _onTabTapped(int index) {
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Stack(
         children: [
           Backgroundcomponent(),
-          _pages[_selectedIndex], // Mostra o conteúdo da guia selecionada
+          _pages[_selectedIndex], 
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -109,9 +109,9 @@ class LogoWithBorderRadius extends StatelessWidget {
       decoration: BoxDecoration(
         color: Color(0xffF9A72A),
         borderRadius:
-            BorderRadius.circular(16.0), // Ajuste o valor conforme necessário
+            BorderRadius.circular(16.0), 
       ),
-      child: Logo(), // Sua logo aqui
+      child: Logo(), 
     );
   }
 }
