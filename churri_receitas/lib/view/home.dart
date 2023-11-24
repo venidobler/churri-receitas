@@ -1,8 +1,8 @@
+import 'package:churry/view/FavoritosScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:churry/model/component/list_products_data.dart';
-import 'package:churry/view/view_product.dart';
-import '../model/products_model.dart';
-import 'FavoritosScreen.dart';
+import 'package:churry/model/products_model.dart';
+import '../model/component/list_products_data.dart';
+import 'view_product.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -22,7 +22,15 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Receitas'),
+        title: Text(
+          'Favoritos',
+          style: TextStyle(
+            color: Colors.white, // Set the text color to white
+            fontWeight: FontWeight.bold, // Optional: Set the font weight
+          ),
+        ),
+        centerTitle: true, // Center the title
+        backgroundColor: Colors.amber, // Set the background color to orange
         actions: [
           IconButton(
             icon: const Icon(Icons.favorite),

@@ -1,10 +1,7 @@
-// FavoritosScreen.dart
-
 import 'package:flutter/material.dart';
 import 'package:churry/model/products_model.dart';
-import 'package:churry/model/component/list_products_data.dart';
-import 'package:churry/view/view_product.dart';
-
+import '../model/component/list_products_data.dart';
+import 'view_product.dart';
 
 class FavoritosScreen extends StatelessWidget {
   final List<Product> favoritos;
@@ -15,16 +12,107 @@ class FavoritosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favoritos'),
+        title: Text(
+          'Favoritos',
+          style: TextStyle(
+            color: Colors.white, // Cor do texto branco
+          ),
+        ),
+        backgroundColor: const Color.fromARGB(255, 235, 187, 115), // Cor de fundo laranja
+        centerTitle: true, // Centraliza o título na barra de navegação
       ),
-      body: ListView.builder(
-        itemCount: favoritos.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(favoritos[index].name),
-            // Add more details or customize as needed
-          );
-        },
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
+          itemCount: favoritos.length,
+          itemBuilder: (context, index) {
+            Product product = favoritos[index];
+
+            return GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductDetailScreen(product: product),
+                  ),
+                );
+              },
+              child: Container(
+                margin: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey[300],
+                ),
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color.fromARGB(
+                            255,
+                            235,
+                            187,
+                            115,
+                          ), // Fundo laranja
+                        ),
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            image: DecorationImage(
+                              image: AssetImage(product.imageUrl),
+                              fit: BoxFit.fitHeight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                        child: Container(
+                          height: 40,
+                          color: Colors.white,
+                          child: GestureDetector(
+                            onTap: () {
+                              // Ação ao clicar no ícone de favorito na tela de favoritos (opcional)
+                            },
+                            child: Center(
+                              child: Icon(
+                                Icons.favorite,
+                                color: Colors.red, // Sempre vermelho na tela de favoritos
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

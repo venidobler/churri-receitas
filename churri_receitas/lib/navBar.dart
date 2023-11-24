@@ -5,6 +5,7 @@ import 'view/home.dart';
 import 'view/search.dart';
 import 'view/favoritosScreen.dart';
 import 'view/profileScreen.dart';
+import '../model/products_model.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -25,7 +26,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _pages = [
     Home(),
     Search(),
-    FavoritosScreen(favoritos: []),
+    FavoritosScreen(favoritos: [],),
     ProfileScreen(),
   ];
 
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => FavoritosScreen(favoritos: []),
+          builder: (context) => FavoritosScreen(favoritos: [],),
         ),
       );
     }
